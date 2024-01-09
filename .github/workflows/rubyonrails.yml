@@ -22,4 +22,4 @@ jobs:
       - name: Check brakeman
         run: brakeman
       - name: Check rubocop
-        run: rubocop --only $(git diff --name-only HEAD^)
+        run: rubocop --only $(git diff --name-only ${{ github.event.before }} ${{ github.sha }})

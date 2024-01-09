@@ -5,7 +5,8 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  test:
+  code_check:
+    name: Bundle-audit, Brakeman, Rubocop
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -14,8 +15,10 @@ jobs:
         uses: ruby/setup-ruby@55283cc23133118229fd3f97f9336ee23a179fcf # v1.146.0
         with:
           bundler-cache: true
+      - name: Install dependencies
+        run: gem install rubocop brakeman bundle-audit
       - name: Check bundle-audit
-        run: bundler-audit
+        run: bundle-audit
       - name: Check brakeman
         run: brakeman
       - name: Check rubocop

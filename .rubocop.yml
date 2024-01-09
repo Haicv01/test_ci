@@ -1,0 +1,59 @@
+AllCops:
+  NewCops: enable
+
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'data/**/*'
+    - 'docker/**/*'
+    - 'spec/*'
+    - 'Guardfile'
+    - 'Dockerfile'
+    - 'app/controllers/concerns/breadcrumbs/search.rb'
+Layout/LineLength:
+  Enabled: true
+  Max: 120
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 20
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  Description: 'Checks if uses of quotes match the configured preference.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  Enabled: true
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: no_comma
+  Enabled: true
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: no_comma
+  Enabled: true
+
+Style/RedundantFreeze:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: nested
+
+Lint/EmptyBlock:
+  Enabled: true
+
+Layout/TrailingWhitespace:
+  Enabled: true
+
+Naming/VariableNumber:
+  Enabled: false

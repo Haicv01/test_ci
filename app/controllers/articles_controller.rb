@@ -70,4 +70,12 @@ class ArticlesController < ApplicationController
   def test
     puts 'test'
   end
+
+  def test_article
+    a = 'article'
+    b = 5
+    { a:, b: }
+  end
+
+  def haha(check = true); end
 end

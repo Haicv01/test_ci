@@ -1,0 +1,29 @@
+name: Pronto Check
+
+on:
+  pull_request:
+    paths:
+      - '**/*.rb' # Thay đổi đường dẫn phù hợp với cấu trúc mã nguồn của bạn
+
+jobs:
+  pronto:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v2
+      with:
+        ruby-version: 3.2.2 # Thay đổi phiên bản Ruby tùy thuộc vào dự án của bạn
+
+    - name: Install dependencies
+      run: |
+        gem install pronto pronto-rubocop
+        bundle install --with test
+
+    - name: Run Pronto
+      run: pronto run -f github_status
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

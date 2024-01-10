@@ -1,0 +1,13 @@
+all:
+  exclude:
+    - 'spec/**/*'
+eslint:
+  exclude:
+    - 'app/assets/**/*'
+github:
+  slug: mmozuras/pronto
+  access_token: B26354
+  api_endpoint: https://api.github.com/
+  web_endpoint: https://github.com/
+max_warnings: 150
+verbose: false

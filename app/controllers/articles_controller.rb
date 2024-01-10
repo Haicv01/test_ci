@@ -70,5 +70,6 @@ class ArticlesController < ApplicationController
   def test(_name = true)
     puts 'test'
     puts 'abc'
+    puts '3434'
   end
 end

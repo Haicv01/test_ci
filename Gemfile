@@ -57,7 +57,9 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'brakeman'
   gem 'bundler-audit'
+  gem 'pronto', '~> 0.11.2'
   gem 'rubocop'
+  gem 'rugged', '~> 1.7.1'
   gem 'web-console'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"

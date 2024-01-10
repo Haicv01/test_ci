@@ -67,7 +67,7 @@ class ArticlesController < ApplicationController
     params.require(:article).permit(:title, :content)
   end
 
-  def test
+  def test(_check = true)
     puts 'test'
   end
 end

@@ -1,9 +1,6 @@
 name: Pronto Check
 
-on:
-  pull_request:
-    paths:
-      - '**/*.rb' # Thay đổi đường dẫn phù hợp với cấu trúc mã nguồn của bạn
+on: [pull_request]
 
 jobs:
   pronto:

@@ -69,5 +69,6 @@ class ArticlesController < ApplicationController
 
   def test
     puts 'test'
+    puts 'abc'
   end
 end

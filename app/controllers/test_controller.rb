@@ -1,5 +1,5 @@
 class TestController < ApplicationController
-  def index
+  def index(_check = true)
     puts 'welcome'
     a = 10
     eval('a * 2')

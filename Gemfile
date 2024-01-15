@@ -64,6 +64,9 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  gem 'pronto'
+  gem 'pronto-flay', require: false
+  gem 'pronto-rubocop', require: false
 end
 
 group :test do

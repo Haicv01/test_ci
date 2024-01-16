@@ -1,8 +1,0 @@
-rubocop:
-  # Map of RuboCop severity level to Pronto severity level
-  severities:
-    refactor: info
-    warning: error
-
-  # Enable suggestions
-  suggestions: true

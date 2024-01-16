@@ -17,6 +17,6 @@ jobs:
         with:
           fetch-depth: 0
       - name: Install dependency
-        run: bundle install pronto pronto-rubocop pronto-flay
+        run: gem install pronto pronto-rubocop pronto-flay
       - name: Check rubocop
         run: bundle exec pronto run -c origin/main -r rubocop

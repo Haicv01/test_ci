@@ -5,4 +5,4 @@ rubocop:
     warning: error
 
   # Enable suggestions
-  suggestions: true
+  suggestions: false

@@ -1,15 +1,15 @@
 name: Pronto
+
 on:
-  pull_request:
-    types: [opened, synchronize]
+  - push
+  - pull_request
+
 jobs:
-  pronto:
+  run:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
-      statuses: write 
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: HeRoMo/pronto-action@v1.60.0
+      - uses: actions/checkout@v2
+      - run: git fetch origin master --depth=1
+      - uses: adwerx/pronto-ruby@main # use a tag version here
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

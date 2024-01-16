@@ -4,7 +4,8 @@ on:
   - pull_request
 
 jobs:
-  pronto:
+  code_check:
+    name: Rubocop
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -12,15 +13,10 @@ jobs:
       statuses: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
-      - run: |
-          git fetch --no-tags --prune --depth=10 origin +refs/heads/*:refs/remotes/origin/*
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-      - name: Setup pronto
-        run: gem install pronto pronto-rubocop
-      - name: Run Pronto
-        run: pronto run -c origin/main
-        env:
-          PRONTO_PULL_REQUEST_ID: ${{ github.event.pull_request.number }}
-          PRONTO_GITHUB_ACCESS_TOKEN: "${{ github.token }}"
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install dependency
+        run: bundle install pronto pronto-rubocop pronto-flay
+      - name: Check rubocop
+        run: bundle exec pronto run -c origin/main -r rubocop

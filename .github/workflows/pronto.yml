@@ -1,7 +1,5 @@
 name: Pronto
-on:
-  - push
-  - pull_request
+on: [pull_request]
 
 jobs:
   pronto:

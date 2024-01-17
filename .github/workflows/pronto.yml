@@ -5,11 +5,14 @@ on:
 
 jobs:
   pronto:
-    permissions: write-all
+    permissions:
+      contents: read
+      pull-requests: write
+      statuses: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - run: |
           git fetch --no-tags --prune --depth=10 origin +refs/heads/*:refs/remotes/origin/*
       - name: Setup Ruby

@@ -5,6 +5,8 @@ jobs:
   pronto:
     permissions: write-all
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_RUNNER_DEBUG: true 
 
     steps:
       - name: Checkout code

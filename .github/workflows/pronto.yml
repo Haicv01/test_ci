@@ -3,7 +3,7 @@ on: [pull_request_target]
 
 jobs:
   pronto:
-
+    permissions: write-all
     runs-on: ubuntu-latest
 
     steps:

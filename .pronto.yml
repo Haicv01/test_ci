@@ -1,8 +1,4 @@
-rubocop:
-  # Map of RuboCop severity level to Pronto severity level
-  severities:
-    refactor: info
-    warning: error
-
-  # Enable suggestions
-  suggestions: false
+pronto:
+  github:
+    comments: false  # Tắt comment trên GitHub
+    commit_comments: false  # Tắt commit comments trên GitHub

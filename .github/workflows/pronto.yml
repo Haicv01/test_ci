@@ -5,9 +5,6 @@ jobs:
   pronto:
     permissions: write-all
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_RUNNER_DEBUG: true 
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -18,4 +15,7 @@ jobs:
       - name: Setup pronto
         run: gem install pronto pronto-rubocop
       - name: Run Pronto
-        run: PRONTO_PULL_REQUEST_ID="${{ github.event.pull_request.number }}" PRONTO_GITHUB_ACCESS_TOKEN="${{ github.token }}" bundle exec pronto run -f github_status -c origin/main -r rubocop
+        env:
+          ACTIONS_RUNNER_DEBUG: true 
+        run: PRONTO_PULL_REQUEST_ID="${{ github.event.pull_request.number }}" PRONTO_GITHUB_ACCESS_TOKEN="${{ github.token }}" pronto run -f github_status -c origin/main -r rubocop
+        

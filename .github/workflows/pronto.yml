@@ -16,4 +16,4 @@ jobs:
       - name: Setup pronto
         run: gem install pronto pronto-rubocop
       - name: Run Pronto
-        run: PRONTO_PULL_REQUEST_ID="${{ github.event.pull_request.number }}" PRONTO_GITHUB_ACCESS_TOKEN="${{ github.token }}" pronto run -r rubocop -f github_status github_pr -c origin/${{ github.base_ref }}
+        run: pronto run /github/workspace/. -c origin/${{ github.base_ref }} -r rubocop -f github_status github_pr

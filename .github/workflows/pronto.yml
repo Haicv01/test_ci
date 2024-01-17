@@ -16,4 +16,4 @@ jobs:
       - name: Setup pronto
         run: gem install pronto pronto-rubocop
       - name: Run Pronto
-        run: pronto run /github/workspace/. -c origin/${{ github.base_ref }} -r rubocop -f github_status github_pr
+        run: pronto run -c origin/${{ github.base_ref }} -r rubocop -f github_status github_pr

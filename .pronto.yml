@@ -1,4 +1,0 @@
-pronto:
-  github:
-    comments: false  # Tắt comment trên GitHub
-    commit_comments: false  # Tắt commit comments trên GitHub

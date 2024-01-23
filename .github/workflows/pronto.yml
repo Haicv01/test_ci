@@ -22,5 +22,5 @@ jobs:
           fail_on_error: true
           reviewdog_flags: false
           level: info
-          rubocop_flags: false
+          rubocop_flags: true
         

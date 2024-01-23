@@ -20,7 +20,7 @@ jobs:
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
           reporter: github-check
           fail_on_error: true
-          reviewdog_flags: false
+          reviewdog_flags: true
           level: info
           rubocop_flags: true
         

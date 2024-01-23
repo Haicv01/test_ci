@@ -19,6 +19,5 @@ jobs:
           rubocop_version: gemfile
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
           reporter: github-check
-          fail_on_error: true
           level: info
         

@@ -20,5 +20,5 @@ jobs:
           rubocop_extensions: rubocop-rails:gemfile rubocop-rspec:gemfile
           fail_on_error: true
           level: error
-          reporter: github-pr-review
+          reporter: github-pr-check
           fetch-depth: 0

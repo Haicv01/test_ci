@@ -21,4 +21,4 @@ jobs:
           fail_on_error: true
           level: error
           reporter: github-pr-review
-        
+          fetch-depth: 0

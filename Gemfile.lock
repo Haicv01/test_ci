@@ -86,12 +86,14 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    coderay (1.1.3)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
     date (3.3.4)
     debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
+    demo-create-gem (0.1.0)
     erubi (1.12.0)
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
@@ -176,6 +178,9 @@ GEM
     pronto-rubocop (0.11.5)
       pronto (~> 0.11.0)
       rubocop (>= 0.63.1, < 2.0)
+    pry (0.14.2)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     psych (5.1.2)
       stringio
     public_suffix (5.0.4)
@@ -293,11 +298,13 @@ DEPENDENCIES
   bundler-audit
   capybara
   debug
+  demo-create-gem
   importmap-rails
   jbuilder
   pronto
   pronto-flay
   pronto-rubocop
+  pry (~> 0.14.2)
   puma (~> 5.0)
   rails (~> 7.0.8)
   redis (~> 4.0)

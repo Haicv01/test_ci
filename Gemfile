@@ -59,6 +59,7 @@ group :development do
   gem 'bundler-audit'
   gem 'rubocop'
   gem 'web-console'
+  gem 'pry', '~> 0.14.2'
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -74,3 +75,5 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+# gem 'demo-create-gem', git: 'git@github.com:Haicv01/demo-create-gem.git'
+gem 'demo-create-gem'

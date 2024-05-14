@@ -1,8 +1,12 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
+  include Demo::Create::Gem
 
   # GET /articles or /articles.json
   def index
+    a = say_hello('world')
+    binding.pry
+
     @articles = Article.all
   end
 
